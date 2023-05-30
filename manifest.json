@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Jira Tab Tracker",
+  "version": "1.0",
+  "description": "Tracks Jira ticket tabs and their durations",
+  "permissions": [
+    "tabs",
+    "browserAction"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false 
+  },
+  "browser_action": {}
+}
