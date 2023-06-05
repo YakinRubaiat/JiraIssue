@@ -2,6 +2,8 @@
 
 This is a Google Chrome extension that helps you keep track of how long you've spent on each Jira ticket. It automatically tracks the amount of time each Jira ticket's tab is open in your Chrome browser, and displays the accumulated time in a popup.
 
+![Screenshot of the extension](issuetracker.png)
+
 ## 🎯 Features
 
 - 🔍 Automatically tracks time spent on each Jira ticket based on the tab's open time.
