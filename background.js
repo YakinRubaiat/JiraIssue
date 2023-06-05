@@ -47,7 +47,7 @@ setInterval(() => {
         const ticket = extractTicketNumber(url);
         if (ticket) {
           chrome.storage.local.get(ticket, (data) => {
-            if (data[ticket] && data[ticket].lastUpdateTime) {
+            if (data?.[ticket]?.lastUpdateTime) {
               const activeTime = Date.now() - data[ticket].lastUpdateTime;
 
               data[ticket].totalActiveTime += activeTime;
