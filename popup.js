@@ -9,11 +9,21 @@ function updateUI() {
   chrome.storage.local.get(null, (data) => {
     const ticketList = document.getElementById("ticketList");
     ticketList.innerHTML = "";
-    for (const [ticket, value] of Object.entries(data)) {
-      if (value.totalActiveTime >= 15 * 60 * 1000) {
-        const p = document.createElement("p");
-        p.textContent = `${ticket}: ${formatTime(value.totalActiveTime)}`;
-        ticketList.appendChild(p);
+
+    // Sort tickets by total active time in descending order
+    const sortedData = Object.entries(data).sort(
+      ([, a], [, b]) => b.totalActiveTime - a.totalActiveTime
+    );
+
+    for (const [ticket, value] of sortedData) {
+      if (value.totalActiveTime >= 5 * 60 * 1000) {
+        const div = document.createElement("div"); // Create a new div for each ticket
+        const a = document.createElement("a");
+        a.textContent = `${ticket}: ${formatTime(value.totalActiveTime)}`;
+        a.href = value.url;
+        a.target = "_blank";
+        div.appendChild(a); // Append the link to the div
+        ticketList.appendChild(div); // Append the div to the ticket list
       }
     }
   });

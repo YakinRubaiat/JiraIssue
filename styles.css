@@ -1,59 +1,70 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    width: 300px;
-    height: 300px;
-  }
-  
-  h1 {
-    background-color: #4a86e8;
-    color: #fff;
-    padding: 10px 15px;
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  #ticketList {
-    padding: 15px;
-    height: 400px;  /* set a fixed height */
-    overflow: auto;  /* show scrollbar if content exceeds the height */
-  }
-  
-  #ticketList p {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 18px;
-  }
-  
-  #ticketList p:nth-child(odd) {
-    background-color: #f2f2f2;
-  }
-  
-  #clearButton {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 50%;
-    transition-duration: 0.4s;
-  }
-  
-  #clearButton:hover {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  width: 300px;
+  height: 300px;
+}
+
+h1 {
+  background-color: #4a86e8;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 0;
+  font-size: 24px;
+}
+
+#ticketList {
+  padding: 15px;
+  height: 400px;  /* set a fixed height */
+  overflow: auto;  /* show scrollbar if content exceeds the height */
+}
+
+#ticketList div {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+}
+
+#ticketList div:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Add styles for anchor tags */
+
+#ticketList div a {
+  color: #333;
+  text-decoration: none;
+}
+
+#ticketList div a:hover {
+  color: #4a86e8;
+}
+
+#clearButton {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition-duration: 0.4s;
+}
+
+#clearButton:hover {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
